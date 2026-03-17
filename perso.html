@@ -4,9 +4,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
-    <script src="javas.js" defer></script>
-
   </head>
+  <script src="javas.js" defer></script>
   <body class ="font bc-bleu-c c-bleu-s">
     <header class="bc-rose-s c-rose-c font-titre box-bande margin-bottom-0 flex justify-between">
         <object data="./medias/logo/logo_c.svg" class="logo"></object>
@@ -17,6 +16,10 @@
     </header>
     <main>
         <h1>Perso</h1>
+        <iframe 
+        src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+        style="width:100%; height:500px; border:2px solid red;">
+        </iframe>
         <div class="flex align-center justify-center">
             <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
                 <div class="flex justify-between font-titre">
@@ -24,6 +27,14 @@
                     <button class="font-bouton bouton chgt-color"><p>∨</p></button>
                 </div>
                 <div class="int-box-deroule">
+                    <button class="open-pdf" data-pdf="./medias/perso/pdf/Portfolio_2022.pdf">Portfolio</button>
+                    <iframe id="pdfFrame" src="./medias/perso/pdf/Portfolio_2022.pdf" style="width:100%; height:90%; border:none;"></iframe>
+                    <!-- Modale -->
+                    <div id="pdfModal" style="display:none; position:fixed; top:10%; left:10%; width:80%; height:80%; background:white; z-index:1000;">
+                    <button id="closePdf">Fermer</button>
+                    <iframe id="pdfFrame" src="./medias/perso/pdf/Portfolio_2022.pdf" style="width:100%; height:90%; border:none;"></iframe>
+                    </div>
+
                     <p>Mon premier <strong>portfolio</strong> fut rédiger en 2024 dans l'objectif d'intégrer la <strong>formation IMAC</strong>.
                         Je n'avais auparavant réaliser aucun projet artistique encadré par un cours.
                         Mon expérience se résumait alors par un apprentissage principalement autodidacte en dessin.

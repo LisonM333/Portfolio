@@ -44,27 +44,31 @@ function fitTextToContainer(container, text) {
   text.style.fontSize = max + "px";
 }
 
-const cadre = document.getElementById(".box-base");
-const texte = document.getElementById(".font-sized");
+const cadre = document.querySelector(".box-base");
+const texte = document.querySelector(".font-sized");
 
 fitTextToContainer(cadre, texte);
 
 
 
-// Sélection du conteneur
-const container = document.querySelector('.logo');
+//GESTION PDF
 
-// Chargement du SVG externe
-fetch('./medias/logo/logo.svg')
-  .then(response => response.text())
-  .then(svgText => {
-    // Injection du SVG dans le DOM
-    container.innerHTML = svgText;
+  const modal = document.getElementById('pdfModal');
+  const iframe = document.getElementById('pdfFrame');
+  const buttons = document.querySelectorAll('.open-pdf');
 
-    // Facultatif : ajouter une classe sur le SVG pour le CSS
-    const svg = container.querySelector('svg');
-    if (svg) {
-      svg.classList.add('logo');
-    }
-  })
-  .catch(err => console.error('Erreur lors du chargement du SVG :', err));
+  // Pour chaque bouton
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      console.log("Bouton cliqué !");
+      const pdfPath = button.getAttribute('data-pdf');
+      iframe.src = pdfPath;
+      modal.style.display = 'block';
+    });
+  });
+
+  // Fermer la modale
+  document.getElementById('closePdf').addEventListener('click', () => {
+    modal.style.display = 'none';
+    iframe.src = ''; // reset
+  });
