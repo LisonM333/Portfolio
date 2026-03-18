@@ -64,36 +64,28 @@ main {
 } */
 
 .c-bleu-c {
-  color : rgb(187 246 252)
+  color : rgb(187 246 252);
 }
 .c-rose-c {
-  color : rgb(250 183 215)
+  color : rgb(250 183 215);
 }
 .c-bleu-s {
-  color : rgb(5 103 112)
+  color : rgb(5 103 112);
 }
 .c-rose-s {
   color : rgb(110 8 57);
 }
 .bc-bleu-c {
-  background-color : rgb(187 246 252)
+  background-color : rgb(187 246 252);
 }
 .bc-rose-c {
-  background-color : rgb(250 183 215)
+  background-color : rgb(250 183 215);
 }
 .bc-bleu-s {
-  background-color : rgb(5 103 112)
+  background-color : rgb(5 103 112);
 }
 .bc-rose-s {
-  background-color : rgb(110 8 57)
-}
-
-.c-rose-c .logo path {
-  color : rgb(250 183 215);
-}
-
-.c-rose-s .logo path {
-  color : rgb(110 8 57);
+  background-color : rgb(110 8 57);
 }
 
 .font-titre {
@@ -124,6 +116,59 @@ main {
   border: none;
   cursor: pointer;
 }
+
+.voir {
+  font-family: Titre-Regular;
+  letter-spacing: -0.12em;
+  word-spacing: 0.5em;
+  color : rgb(33 11 60);
+  background-color : rgb(168, 118, 229);
+}
+
+.voir:hover {
+  color : rgb(168, 118, 229);
+  background-color : rgb(33 11 60);
+}
+
+#pdfModal{
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(33, 11, 60, 0.5);
+  z-index: 10000;
+}
+
+.close {
+  font-family: Titre-Regular;
+  letter-spacing: -0.12em;
+  word-spacing: 0.5em;
+  color : rgb(33 11 60);
+  background-color : rgb(168, 118, 229);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.close:hover {
+  color : rgb(168, 118, 229);
+  background-color : rgb(33 11 60);
+}
+
+#pdfFrame{
+  width: auto;
+  height: 100vh;
+  border: none;
+}
+
 
 .chgt-color:hover {
   color : rgb(168, 118, 229);

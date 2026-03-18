@@ -25,32 +25,9 @@ document.querySelectorAll(".bouton").forEach(btn => {
   });
 });
 
-function fitTextToContainer(container, text) {
-  let min = 1;
-  let max = 1000;
-  let size;
-
-  while (min <= max) {
-    size = Math.floor((min + max) / 2);
-    text.style.fontSize = size + "px";
-
-    if (text.offsetWidth < container.offsetWidth) {
-      min = size + 1;
-    } else {
-      max = size - 1;
-    }
-  }
-
-  text.style.fontSize = max + "px";
-}
-
-const cadre = document.querySelector(".box-base");
-const texte = document.querySelector(".font-sized");
-
-fitTextToContainer(cadre, texte);
 
 
-
+console.log("JS chargé !");
 //GESTION PDF
 
   const modal = document.getElementById('pdfModal');
@@ -59,13 +36,21 @@ fitTextToContainer(cadre, texte);
 
   // Pour chaque bouton
   buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      console.log("Bouton cliqué !");
-      const pdfPath = button.getAttribute('data-pdf');
-      iframe.src = pdfPath;
-      modal.style.display = 'block';
-    });
+  button.addEventListener('click', () => {
+    const pdfPath = button.getAttribute('data-pdf');
+    const orientation = button.getAttribute('data-orientation');
+
+    iframe.src = pdfPath;
+
+    if (orientation === "landscape") {
+      iframe.style.aspectRatio = "1.414 / 1"; // horizontal
+    } else {
+      iframe.style.aspectRatio = "1 / 1.414"; // vertical
+    }
+
+    modal.style.display = 'block';
   });
+});
 
   // Fermer la modale
   document.getElementById('closePdf').addEventListener('click', () => {

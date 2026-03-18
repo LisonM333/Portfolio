@@ -5,7 +5,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
   </head>
-  <script src="javas.js" defer></script>
   <body class ="font bc-bleu-c c-bleu-s">
     <header class="bc-rose-s c-rose-c font-titre box-bande margin-bottom-0 flex justify-between">
         <object data="./medias/logo/logo_c.svg" class="logo"></object>
@@ -15,11 +14,12 @@
         </div>
     </header>
     <main>
+        
+        <div id="pdfModal">
+            <button id="closePdf" class ="close">Fermer</button>
+            <iframe id="pdfFrame" src="./medias/perso/pdf/Portfolio_2022.pdf" ></iframe>
+        </div>
         <h1>Perso</h1>
-        <iframe 
-        src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-        style="width:100%; height:500px; border:2px solid red;">
-        </iframe>
         <div class="flex align-center justify-center">
             <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
                 <div class="flex justify-between font-titre">
@@ -27,14 +27,7 @@
                     <button class="font-bouton bouton chgt-color"><p>∨</p></button>
                 </div>
                 <div class="int-box-deroule">
-                    <button class="open-pdf" data-pdf="./medias/perso/pdf/Portfolio_2022.pdf">Portfolio</button>
-                    <iframe id="pdfFrame" src="./medias/perso/pdf/Portfolio_2022.pdf" style="width:100%; height:90%; border:none;"></iframe>
-                    <!-- Modale -->
-                    <div id="pdfModal" style="display:none; position:fixed; top:10%; left:10%; width:80%; height:80%; background:white; z-index:1000;">
-                    <button id="closePdf">Fermer</button>
-                    <iframe id="pdfFrame" src="./medias/perso/pdf/Portfolio_2022.pdf" style="width:100%; height:90%; border:none;"></iframe>
-                    </div>
-
+                    <button class="open-pdf voir" data-pdf="./medias/perso/pdf/Portfolio_2022.pdf" data-orientation="portrait">Voir</button>
                     <p>Mon premier <strong>portfolio</strong> fut rédiger en 2024 dans l'objectif d'intégrer la <strong>formation IMAC</strong>.
                         Je n'avais auparavant réaliser aucun projet artistique encadré par un cours.
                         Mon expérience se résumait alors par un apprentissage principalement autodidacte en dessin.
@@ -55,15 +48,18 @@
                         Il n'y a pas de récompense en soit et la nuit blanche qui en découle est douloureuse cependant une association de ma formation met chaque année en place un rassemblement des participants.
                         Cela devant alors une expérience incroyable qui me convient chaque semestre pour recommencer 6 mois plus tard.
                     </p>
+                    <button class="open-pdf voir" data-pdf="./medias/perso/pdf/25HBD_2024.pdf" data-orientation="portrait">Voir</button>
                     <p>Ma toute première participation fut aux 25H de la BD 2024.
                         J'y avais participé en équipe de trois personnes.
                         Le thème était alors <strong>"inquiétante étrangeté"</strong> avec pour contrainte de mettre en scène le rêve d'un personnage.
                     </p>
+                    <button class="open-pdf voir" data-pdf="./medias/perso/pdf/23HBD_2025.pdf" data-orientation="landscape">Voir</button>
                     <p>Ma seconde particpation fut cette fois en solitaire aux 23H de la BD 2025.
                         Ou plutôt j'étais dans une équipe dont chaque membre ne travaillait pas sur le même projet.
                         J'ai donc créer 24 pages de BD en 23 heures sur le thème de l'<strong>océan</strong> et avec pour contrainte un personnage en retard.
                         Pour le format de l'histoire je me suis grandement inspiré du format de livre pour enfant, plus particulièrment de l'auteur CLaude Ponti.
                     </p>
+                    <button class="open-pdf voir" data-pdf="./medias/perso/pdf/25HBD_2025.pdf" data-orientation="landscape">Voir</button>
                     <p>Ma troisième particpation fut aux 25H de la BD 2025.
                         J'ai à nouveau choisi d'y participer en solitaire dans mon entreprise.
                         L'epérience précédente m'a permis de mieux m'organiser, de fait j'ai pu aller plus loin dans la création de ma BD.
@@ -96,12 +92,14 @@
                         Les contraintes nous étaient imposées par un tirage au sort et chaque participant obtenait un duo de contrainte différent.
                         J'ai participé chaque année pendant trois ans avec un grand plaisir.
                     </p>
+                    <button class="open-pdf voir" data-pdf="./medias/perso/pdf/Nouvelle_2020.pdf" data-orientation="portrait">Voir</button>
                     <p>
                         La première année avait pour thème les <strong>livres</strong>.
                         Deux contraintes nous étaient imposées : une personnage littéraire connu et un extrait littéraire.
                         Pour ma part j'étais tombé sur le personnage d'Alice du livre d' "Alice au pays des merveilles" et un extrait du livre "Dracula".
                         Je suis fière de dire que cette nouvelle gagna la première place du concours.
                     </p>
+                    <button class="open-pdf voir" data-pdf="./medias/perso/pdf/Nouvelle_2021.pdf" data-orientation="portrait">Voir</button>
                     <p>
                         La seconde année avait gardé pour thème <strong>les livres</strong>, puisque l'année précédentes avait été touché par le confinement.
                         Le thèmes avait été réutilisé afin de ne pas faire une croix sur les autres activitées organisés qui n'avait alors pas eu lieux.
@@ -125,4 +123,5 @@
       <div><p>@ fait avec amour</p></div>
     </footer>
   </body>
+  <script src="javas.js" defer></script>
 </html>
