@@ -39,6 +39,10 @@ main {
   flex: 1;   /* prend tout l’espace restant */
 }
 
+p {
+  margin: 0;
+}
+
 /* .colo-base {
   color :rgb(49, 110, 89);
 }
@@ -110,6 +114,10 @@ main {
   /* font-size : 15px; */
 }
 
+.img-sized{
+  width: 15vw;
+}
+
 .bouton {
   color :inherit;
   background: none;
@@ -121,17 +129,22 @@ main {
   font-family: Titre-Regular;
   letter-spacing: -0.12em;
   word-spacing: 0.5em;
+  width: 40px;
+  height:20px;
+  border: none;
+  margin: 5px;
   color : rgb(33 11 60);
   background-color : rgb(168, 118, 229);
 }
 
 .voir:hover {
+  border: none;
   color : rgb(168, 118, 229);
   background-color : rgb(33 11 60);
 }
 
 #pdfModal{
-  display:none;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -153,8 +166,8 @@ main {
   color : rgb(33 11 60);
   background-color : rgb(168, 118, 229);
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   z-index: 10;
 }
 
@@ -168,7 +181,6 @@ main {
   height: 100vh;
   border: none;
 }
-
 
 .chgt-color:hover {
   color : rgb(168, 118, 229);
@@ -239,6 +251,19 @@ main {
   overflow: visible;
 }
 
+.sub-int-box {
+  display :flex;
+  justify-content : center;
+  align-items: start;
+  margin : 10px;
+}
+
+
+.sub-int-box > div{
+  display :flex;
+  justify-content : center;
+}
+
 .box-bande {
   width : vw;
   padding : 20px;
@@ -256,6 +281,13 @@ main {
 .margin-top-100 {
   margin-top : 100px;
 }
+
+
+
+
+
+
+
 
 .rec_test_v {
   height: 30vw;

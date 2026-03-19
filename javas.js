@@ -16,7 +16,7 @@ document.querySelectorAll(".bouton").forEach(btn => {
 
     // Ouvre / ferme celui cliqué
     int_box.classList.toggle("open");
-     const icon = btn.querySelector("h3");
+     const icon = btn.querySelector("p");
     if (int_box.classList.contains("open")) {
       icon.textContent = "∧";  // ouvert
     } else {
@@ -48,7 +48,7 @@ console.log("JS chargé !");
       iframe.style.aspectRatio = "1 / 1.414"; // vertical
     }
 
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
   });
 });
 
