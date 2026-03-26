@@ -9,31 +9,68 @@
   <body class ="font bc-bleu-c c-bleu-s">
     <header class="bc-rose-s c-rose-c font-titre box-bande margin-bottom-0 flex justify-between">
       <object data="./medias/logo/logo_c.svg" class="logo"></object>
-      <a href="index.html"><p class="c-rose-c chgt-color">Menu</p></a>
+      <div class="flex gap">
+        <button id="burger" class="font-bouton bouton chgt-color">☰</button>
+        <nav id="menu">
+          <a href="perso.html">PERSO</a>
+          <a href="audiovisuel.html">AUDIOVISUEL</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+      </div>
     </header>
     <main>
-      <h1>Artistique</h1>
+      <div id="pdfModal" style="display: none;">
+        <button id="closePdf" class ="close">Fermer</button>
+        <iframe id="pdfFrame"></iframe>
+      </div>
+    <h1>Artistique</h1>
       <div class="flex align-center justify-center">
           <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
               <div class="flex justify-between font-titre">
                 <h2>Curseur</h2> 
                 <button class="font-bouton bouton chgt-color"><p>∨</p></button>
               </div>
-              <div class="int-box-deroule">test</div>
+              <div class="int-box-deroule"><div class="sub-int-box">
+                <div>
+                    <img class="img-sized" src="./medias/art/png/Curseur.png">
+                </div>
+                <p>text</p>
+              </div></div>
           </div>
           <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
               <div class="flex justify-between font-titre">
                 <h2>Jeu MapDigger</h2> 
                 <button class="font-bouton bouton chgt-color"><p>∨</p></button>
               </div>
-              <div class="int-box-deroule">test</div>
+              <div class="int-box-deroule"><div class="sub-int-box">
+                <div>
+                    <img class="img-sized" src="./medias/art/png/Mapdigger_personnage.png">
+                </div>
+                <p>
+                  text
+                </p>
+                </div><div class="sub-int-box">
+                <div>
+                    <img class="img-sized" src="./medias/art/png/Mapdigger_texture.png">
+                </div>
+                <p>
+                  text
+                </p>
+              </div></div>
           </div>
           <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
               <div class="flex justify-between font-titre">
                 <h2>Quitcho</h2> 
                 <button class="font-bouton bouton chgt-color"><p>∨</p></button>
               </div>
-              <div class="int-box-deroule">test</div>
+              <div class="int-box-deroule"><div class="sub-int-box">
+                <div>
+                    <img class="img-sized" src="./medias/art/png/Quitcho.png">
+                </div>
+                <p>
+                  text
+                </p>
+              </div></div>
           </div>
       </div>
     </main>

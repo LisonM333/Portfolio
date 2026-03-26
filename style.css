@@ -110,12 +110,13 @@ p {
   font-family: Titre-Regular;
   letter-spacing: -0.12em;
   word-spacing: 0.5em;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   /* font-size : 15px; */
 }
 
 .img-sized{
-  width: 15vw;
+  max-width: 20vw;
+  max-height: 20vw;
 }
 
 .bouton {
@@ -123,6 +124,35 @@ p {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+#menu {
+  position: absolute;
+  top: 104px;
+  right: 17px;
+  background: rgb(168, 118, 229);
+  border: 1px solid rgb(33 11 60);;
+  display: none;
+  flex-direction: column;
+}
+
+#menu.active {
+  display: flex;
+}
+
+#menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(33 11 60);;
+}
+
+#menu a:hover {
+  color : rgb(168, 118, 229);
+  background : rgb(33 11 60);
+}
+
+#burger {
+  font-size: x-large;
 }
 
 .voir {
@@ -159,6 +189,22 @@ p {
   z-index: 10000;
 }
 
+/* #vidModal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(33, 11, 60, 0.5);
+  z-index: 10000;
+} */
+
 .close {
   font-family: Titre-Regular;
   letter-spacing: -0.12em;
@@ -181,6 +227,11 @@ p {
   height: 100vh;
   border: none;
 }
+
+/* #mp4Frame{
+  width: 400px;
+  border: none;
+} */
 
 .chgt-color:hover {
   color : rgb(168, 118, 229);
@@ -334,11 +385,97 @@ p {
   opacity: 1;
 }
 
+
+
+.img-container {
+  position: relative;
+  margin : 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35vw; /* ou ce que tu veux */
+  height: 35vw;
+}
+
+.img-container img {
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay_2 {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text-overlayed {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.img-container:hover .overlay{
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.img-container:hover .overlay_2{
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.img-container:hover .text-overlayed{
+  color: rgb(168, 118, 229);
+  font-size: 75px;
+  opacity: 1;
+  transition: color 1s ease, font-size 1s ease, opacity 1s ease;
+}
+
 .logo {
   height : 75px;
 }
 
 /* strong {
   color: rgb(55, 19, 99);
+} */
+
+/* .test_img {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.test_img img{
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.test_img::after {
+
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: purple;
+  opacity: 0;
+  transition: 0.3s;
+  mix-blend-mode: color;
+}
+
+.test_img:hover::after {
+  opacity: 1;
 } */
 

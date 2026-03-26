@@ -9,9 +9,24 @@
   <body class ="font bc-bleu-c c-bleu-s">
     <header class="bc-rose-s c-rose-c font-titre box-bande margin-bottom-0 flex justify-between">
       <object data="./medias/logo/logo_c.svg" class="logo"></object>
-      <a href="index.html"><p class="c-rose-c  chgt-color">Menu</p></a>
+      <div class="flex gap">
+        <button id="burger" class="font-bouton bouton chgt-color">☰</button>
+
+        <nav id="menu">
+          <a href="perso.html">PERSO</a>
+          <a href="artistique.html">ARTISTIQUE</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+      </div>
     </header>
     <main>
+      <!-- <div id="vidModal" style="display: none;">
+        <button id="closeVid" class ="close">Fermer</button>
+        <video id="mp4Frame" width="400" controls>
+          <source id="mp4Src" type="video/mp4">
+          Ton navigateur ne supporte pas la vidéo.
+        </video>
+      </div> -->
       <h1>Audiovisuel</h1>
         <div class="flex align-center justify-center">
           <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
@@ -19,28 +34,59 @@
                 <h2>Projet 3D</h2> 
                 <button class="font-bouton bouton chgt-color"><p>∨</p></button>
               </div>
-              <div class="int-box-deroule">test</div>
+              <div class="int-box-deroule"><div class="sub-int-box">
+                <div>
+                    <img class="img-sized" src="./medias/art/png/Curseur.png">
+                </div>
+                <p>text</p>
+              </div></div>
           </div>
           <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
               <div class="flex justify-between font-titre">
                 <h2>Générique</h2> 
                 <button class="font-bouton bouton chgt-color"><p>∨</p></button>
               </div>
-              <div class="int-box-deroule">test</div>
+              <div class="int-box-deroule"><div class="sub-int-box">
+                <div>
+                  <video width="400" controls>
+                    <source src="./medias/audiovisuel/mp4/generique.mp4" type="video/mp4">
+                    Ton navigateur ne supporte pas la vidéo.
+                  </video>
+                </div>
+                <p>text</p>
+              </div></div>
           </div>
           <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
               <div class="flex justify-between font-titre">
                 <h2>Traitement de son</h2> 
                 <button class="font-bouton bouton chgt-color"><p>∨</p></button>
               </div>
-              <div class="int-box-deroule">test</div>
+              <div class="int-box-deroule"><div class="sub-int-box">
+                <div>
+                  <audio controls>
+                    <source src="./medias/audiovisuel/mp3/Traitement_son.mp3" type="audio/mpeg">
+                    Ton navigateur ne supporte pas l'audio.
+                  </audio>
+                </div>
+                <p>text</p>
+              </div></div>
           </div>
           <div class="box-deroule margin-top-100 bc-bleu-s c-bleu-c">
               <div class="flex justify-between font-titre">
-                <h2>Breath</h2> 
+                <h2>Breathe</h2> 
                 <button class="font-bouton bouton chgt-color"><p>∨</p></button>
               </div>
-              <div class="int-box-deroule">test</div>
+              <div class="int-box-deroule"><div class="sub-int-box">
+                <div>
+                  <video width="400" controls>
+                    <source src="./medias/audiovisuel/mp4/breathe.mp4" type="video/mp4">
+                    Ton navigateur ne supporte pas la vidéo.
+                  </video>
+                  <!-- <img class="img-sized" src="./medias/art/png/Curseur.png">
+                  <button class="open-mp4 voir" data-mp4="./medias/audiovisuel/mp4/breath.mp4">Voir</button> -->
+                </div>
+                <p>text</p>
+              </div></div>
           </div>
         </div>
     </main>

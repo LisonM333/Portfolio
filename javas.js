@@ -27,15 +27,37 @@ document.querySelectorAll(".bouton").forEach(btn => {
 
 
 
+//BOUTON MENU BURGER
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+
+// Ouvrir / fermer avec le bouton
+burger.addEventListener("click", (e) => {
+  e.stopPropagation(); // évite fermeture immédiate
+  menu.classList.toggle("active");
+});
+
+// Fermer si clic ailleurs
+document.addEventListener("click", (e) => {
+  if (!menu.contains(e.target) && e.target !== burger) {
+    menu.classList.remove("active");
+  }
+});
+
+
 console.log("JS chargé !");
 //GESTION PDF
 
-  const modal = document.getElementById('pdfModal');
-  const iframe = document.getElementById('pdfFrame');
-  const buttons = document.querySelectorAll('.open-pdf');
+const modal = document.getElementById('pdfModal');
+// const modalVid = document.getElementById('vidModal');
+const iframe = document.getElementById('pdfFrame');
+// const video = document.getElementById('mp4Frame');
+// const source = document.getElementById('mp4Src');
+const buttonsPDF = document.querySelectorAll('.open-pdf');
+// const buttonsVID = document.querySelectorAll('.open-mp4');
 
-  // Pour chaque bouton
-  buttons.forEach(button => {
+// Pour chaque bouton
+buttonsPDF.forEach(button => {
   button.addEventListener('click', () => {
     const pdfPath = button.getAttribute('data-pdf');
     const orientation = button.getAttribute('data-orientation');
@@ -51,9 +73,26 @@ console.log("JS chargé !");
     modal.style.display = 'flex';
   });
 });
+// buttonsVID.forEach(button => {
+//   button.addEventListener('click', () => {
+//     const vidPath = button.getAttribute('data-mp4');
+
+//     source.src = vidPath;
+//     source.type = "video/mp4";
+//     video.load(); 
+
+//     modalVid.style.display = 'flex';
+//   });
+// });
 
   // Fermer la modale
   document.getElementById('closePdf').addEventListener('click', () => {
     modal.style.display = 'none';
     iframe.src = ''; // reset
   });
+  // document.getElementById('closeVid').addEventListener('click', () => {
+  //   modalVid.style.display = 'none';
+  //   source.src = ''; // reset
+  //   source.type = "video/mp4";
+  //   video.load(); 
+  // });
