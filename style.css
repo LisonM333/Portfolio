@@ -315,6 +315,10 @@ p {
   justify-content : center;
 }
 
+.sub-int-box > p{
+  margin : 10px;
+}
+
 .box-bande {
   width : vw;
   padding : 20px;
