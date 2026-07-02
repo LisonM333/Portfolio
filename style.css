@@ -210,6 +210,7 @@ p {
 #text-prez{
   align-items: center;
   justify-content: space-between;
+  margin : 0px 10px;
 }
 
 strong {
@@ -329,7 +330,7 @@ strong {
   justify-content: center;
   align-items: center;
 
-  background: var(--color_clair);
+  background: rgb(var(--color_clair)/ 0.8);
   z-index: 10000;
 }
 
@@ -358,6 +359,67 @@ strong {
   width: auto;
   height: 100vh;
   border: none;
+}
+
+#galleryModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#galleryModal.active {
+    display: flex;
+}
+
+#gallery-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#gallery-content img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+/* .close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+} */
+
+#prev,
+#next {
+    width:40px;
+    height:40px;
+    font-size: larger;
+    cursor: pointer;
+    background: var(--color_blanc);
+    color: var(--color_sombre);
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#prev:hover ,#next:hover {
+    background: var(--color_blanc);
+    color: var(--color_autre);
+}
+
+.fond-modal{
+  position: fixed;
+  inset: 0;
+  background:var(--color_clair);
+  opacity: 0.8;
+  z-index: -1;
 }
 
 .box-deroule {
@@ -420,6 +482,7 @@ strong {
 .img-sized{
   max-width: 20vw;
   max-height: 20vw;
+  border-radius: 10px;
 }
 
 .open-pdf {
@@ -433,14 +496,30 @@ strong {
   margin: 5px;
   color : var(--color_sombre) ;
   background-color : var(--color_blanc);
+  cursor: pointer;
 }
 
 .open-pdf:hover {
   color : var(--color_autre);
 }
 
+.open-gallery {
+  font-family: Titre-Regular;
+  letter-spacing: -0.12em;
+  word-spacing: 0.5em;
+  width: 40px;
+  height:20px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  color : var(--color_sombre) ;
+  background-color : var(--color_blanc);
+  cursor: pointer;
+}
 
-
+.open-gallery:hover {
+  color : var(--color_autre);
+}
 
 
 

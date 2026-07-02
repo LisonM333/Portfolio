@@ -232,3 +232,50 @@ buttonsPDF.forEach(button => {
   // });
 
 });
+
+
+//GESTION GALERIE
+
+const modal_gallery = document.getElementById("galleryModal");
+const img = document.getElementById("galleryImage");
+let images = [];
+let current = 0;
+let currentFolder = "";
+
+document.querySelectorAll(".open-gallery").forEach(button => {
+  button.addEventListener("click", async () => {
+    currentFolder = button.dataset.folder;
+    const response = await fetch(`medias/${currentFolder}/0.json`);
+    images = await response.json();
+
+    current = 0;
+    img.src = `medias/${currentFolder}/${images[current]}`;
+    modal_gallery.classList.add("active");
+  });
+});
+
+// document.querySelector(".close").onclick = () => {
+//     modal_gallery.classList.remove("active");
+// };
+document.getElementById('closeGall').addEventListener('click', () => {
+  modal_gallery.classList.remove("active");
+  images = [];
+  current = 0;
+  currentFolder = "";// reset
+});
+
+document.getElementById("next").onclick = () => {
+    current = (current + 1) % images.length;
+    img.src = `medias/${currentFolder}/${images[current]}`;
+};
+
+document.getElementById("prev").onclick = () => {
+    current = (current - 1 + images.length) % images.length;
+    img.src = `medias/${currentFolder}/${images[current]}`;
+};
+
+modal_gallery.onclick = (e) => {
+    if (e.target === modal_gallery) {
+        modal_gallery.classList.remove("active");
+    }
+};

@@ -22,11 +22,11 @@
         <button id="toggle" aria-label="Modificateur des couleurs de la pages">◍</button>
 
         <div id="panel">
-          <label>Couleur Forte
+          <label>Couleur Sombre
             <input type="color" id="c1" value="#453A9B">
           </label>
 
-          <label>Couleur Faible
+          <label>Couleur Claire
             <input type="color" id="c2" value="#B8E6FE">
           </label>
 
@@ -50,10 +50,28 @@
     <main>
         
         <div id="pdfModal" style="display: none;">
+            <div class="fond-modal"></div>
             <button id="closePdf" class ="close">Fermer</button>
             <iframe id="pdfFrame"></iframe>
         </div>
+        <div id="galleryModal">
+            <div class="fond-modal"></div>
+            <div id="gallery-content">
+                <button id="closeGall" class ="close">Fermer</button>
+                <button id="prev">⊰</button>
+                <img id="galleryImage" src="" alt="">
+                <button id="next">⊱</button>
+            </div>
+        </div>
+
         <h1>Perso</h1>
+        <div id="text-prez">
+          <p>J'ai toujours été très créative et ai toujours fait de mon mieux pour réaliser des projets personnels à coté de mes études. 
+            Dans cette section je mets tous es projets en peu plus personnels. 
+            Bien que beaucoup de projets présentés ici aient aussi bien leur place dans d'autres sections, j'ai préféré les mettres à part. 
+            Cela permet de distinguer les projets tirés d'une consignes avec une note à la fin et ceux fait de ma propre volonté oudans un cadre facultatif.
+          </p>
+        </div>
 
         <div id="box-frame">
             <div class="box-deroule">
@@ -63,11 +81,11 @@
                 </div>
                 <div class="int-box-deroule"><div class="sub-int-box">
                     <div>
-                        <img class="img-sized" src="./medias/perso/jpg/Portfolio_2022.jpg">
-                        <button class="open-pdf" data-pdf="./medias/perso/pdf/Portfolio_2022.pdf" data-orientation="portrait">Voir</button>
+                        <img class="img-sized" src="./medias/perso/jpg/Portfolio_2024.jpg">
+                        <button class="open-pdf" data-pdf="./medias/perso/pdf/Portfolio_2024.pdf" data-orientation="portrait">Voir</button>
                     </div>
                     <p>Mon premier <strong>portfolio</strong> fut rédiger en 2024 dans l'objectif d'intégrer la <strong>formation IMAC</strong>.
-                        Je n'avais auparavant réaliser aucun projet artistique encadré par un cours.
+                        Je n'avais auparavant réaliser aucun projet artistique strictement encadré par un cours.
                         Mon expérience se résumait alors par un apprentissage principalement autodidacte en dessin.
                         Aujourdh'hui j'ai un éventail de projet et de domaines différents dans lesquels je me suis impliqué.
                         Ce tout premier portfolio reste malgré tout une bonne représentation de mon imagination et l'exposition des compétences acquises avant L'IMAC.
@@ -94,10 +112,11 @@
                         J'y avais participé en équipe de trois personnes.
                         Le thème était alors <strong>"inquiétante étrangeté"</strong> avec pour contrainte de mettre en scène le rêve d'un personnage.
                     </p></div>
-                    <div class="sub-int-box"><p>Ma seconde particpation fut cette fois en solitaire aux 23H de la BD 2025.
-                        Ou plutôt j'étais dans une équipe dont chaque membre ne travaillait pas sur le même projet.
-                        J'ai donc créer 24 pages de BD en 23 heures sur le thème de l'<strong>océan</strong> et avec pour contrainte un personnage en retard.
-                        Pour le format de l'histoire je me suis grandement inspiré du format de livre pour enfant, plus particulièrment de l'auteur CLaude Ponti.
+                    <div class="sub-int-box"><p>Ma seconde particpation fut cette fois en solitaire aux 23H de la BD 2025. 
+                        Ou plutôt j'étais dans une équipe dont chaque membre ne travaillait pas sur le même projet. 
+                        J'ai donc créer 24 pages de BD en 23 heures sur le thème de l'<strong>océan</strong> et avec pour contrainte un personnage en retard. 
+                        Pour le format de l'histoire je me suis grandement inspiré du format de livre pour enfant, plus particulièrment de l'auteur CLaude Ponti. 
+                        Pour le pseudo de participation "Dupond", il s'agit seulement d'un jeu avec un ami qui participait qui avait pris comme pseudo "Dupont".
                     </p>
                     <div>
                         <button class="open-pdf" data-pdf="./medias/perso/pdf/23HBD_2025.pdf" data-orientation="landscape">Voir</button>
@@ -126,6 +145,10 @@
                     <button class="bouton-deroule"><p>∨</p></button>
                 </div>
                 <div class="int-box-deroule"><div class="sub-int-box">
+                    <div>
+                        <img class="img-sized" src="./medias/perso/jpg/Inktober_2025.jpg">
+                        <button class="open-gallery" data-folder="perso/gallery/Inktober">Voir</button>
+                    </div>
                     <p>En octobre 2025, j'ai choisi de faire l'<strong>inktober</strong>.
                         Je l'avais fait en parallèle d'une amie qui m'avait proposé de créer nous même une liste de mot.
                         J'étais parvenu à finir le mois sans oublie.
@@ -176,6 +199,7 @@
                         Je suis fière de dire que cette nouvelle gagna la première place du concours.
                     </p>
                     <div>
+                        <button class="open-pdf" data-pdf="./medias/perso/pdf/Nouvelle_2022.pdf" data-orientation="portrait">Voir</button>
                         <img class="img-sized" src="./medias/perso/png/Nouvelle_2022_cover.png">
                     </div>
                     </div>                   
@@ -205,7 +229,7 @@
           </div>
         </div>
 
-        <p>mis à jour le 17 / 06 / 2026</p>
+        <p>mis à jour le 02 / 07 / 2026</p>
         <p class="copyright">
           © 2026 fait avec amour
         </p>
