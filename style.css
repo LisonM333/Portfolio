@@ -774,7 +774,8 @@ footer{
   }
 
   .sub-int-box {
-
+    flex-direction: column;
+    align-items: center;
   }
 
   .sub-int-box > div{
