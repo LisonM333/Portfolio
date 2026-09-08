@@ -466,7 +466,7 @@ strong {
 
 .sub-int-box {
   display :flex;
-  flex-direction: column;
+  flex-direction: row; /*y avait un column ici, peut y avoir un impact*/
   justify-content : center;
   align-items: start;
   margin : 10px;
