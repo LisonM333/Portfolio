@@ -15,8 +15,8 @@
       "purpose": "any maskable"
     }
   ], 
-  "start_url": ".",
-  "scope": ".",
+  "start_url": "/Portfolio/",
+  "scope": "/Portfolio/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff"
