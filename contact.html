@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./medias/logo/favicon.png">
     <meta charset="utf-8" />
     <script src="javas.js" defer></script>
   </head>
@@ -56,6 +57,16 @@
         <button id="closePdf" class ="close">Fermer</button>
         <iframe id="pdfFrame"></iframe>
       </div>
+      <div id="galleryModal">
+        <div class="fond-modal"></div>
+        <div id="gallery-content">
+          <button id="closeGall" class ="close">Fermer</button>
+          <button id="prev">⊰</button>
+          <img id="galleryImage" src="" alt="">
+          <button id="next">⊱</button>
+        </div>
+      </div>
+
       <h1>Contact</h1>
 
       <div id="box-frame">
@@ -68,7 +79,7 @@
               <h3>Formation actuelle :</h3><p>IMAC (proposée par ESIEE paris)</p>
               <h3>Numéro :</h3><p>(+33) 6 03 78 59 78</p><p>En raison de mon emploi du temps, je réponds rarement au téléphone.  Merci d'en tenir compte.</p>
               <h3>Emails :</h3><p>li.marvin@laposte.net</p><p>lison.marvin@edu.esiee.fr</p>
-              <h3>Insta :</h3>
+              <h3>Insta :</h3><p>@luta_flower</p>
             </div>
         </div>
           <div class="box-deroule">
@@ -79,8 +90,9 @@
               <div class="int-box-deroule"><div class="sub-int-box">
                 <div>
                     <img class="img-sized" src="./medias/contact/CV.png">
-                    <button class="open-pdf" data-pdf="./medias/contact/CV_LisonMARVIN_2026.pdf" data-orientation="portrait">Voir</button>
-                </div>
+                    <!-- <button class="open-pdf" data-pdf="./medias/contact/CV_LisonMARVIN_2026.pdf" data-orientation="portrait">Voir</button> -->
+                    <button class="open-gallery" data-folder="contact/gallery/CV_2026">Voir</button>
+                  </div>
                 <p>CV actuel.
                 </p>
               </div></div>

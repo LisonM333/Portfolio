@@ -244,9 +244,11 @@ let currentFolder = "";
 
 document.querySelectorAll(".open-gallery").forEach(button => {
   button.addEventListener("click", async () => {
+    console.log("Bouton galerie cliqué !");
     currentFolder = button.dataset.folder;
     const response = await fetch(`medias/${currentFolder}/0.json`);
     images = await response.json();
+    console.log("Images chargées");
 
     current = 0;
     img.src = `medias/${currentFolder}/${images[current]}`;
