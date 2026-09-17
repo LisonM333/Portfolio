@@ -17,6 +17,6 @@
   ], 
   "start_url": "/Portfolio/",
   "display": "standalone",
-  "background_color": "#800080",
-  "theme_color": "#00ffff"
+  "background_color": "#b8e6fe",
+  "theme_color": "#ffffff"
 }
