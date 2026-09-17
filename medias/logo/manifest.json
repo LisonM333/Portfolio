@@ -16,8 +16,7 @@
     }
   ], 
   "start_url": "/Portfolio/",
-  "scope": "/Portfolio/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  "background_color": "#800080",
+  "theme_color": "#00ffff"
 }
